@@ -18,6 +18,7 @@ html {
     overflow-x: hidden;
     padding-top: 105px;
     padding-left: 40px;
+    text-align: center;
 }
 
 .main-title a{
@@ -29,13 +30,22 @@ html {
     text-decoration: none;
 }
 
-.series-header{
+.main-title a:hover{
+    color: var(--cornflower)
+}
+
+#series-header{
     font-family: anonymous-pro, monospace;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     font-size: .9em;
     color:grey;
     text-decoration: none;
+    display: inline-block;
+    padding-left: 40px;
+    border: none;
+    background: none;
+    line-height: 0;
 }
 
 .nav-menu {
@@ -50,10 +60,6 @@ html {
     line-height: 1.3;
 }
 
-.sub-menu {
-    list-style-type: none;
-}
-
 .nav-menu a{
     font-family: anonymous-pro, monospace;
     font-weight: 400;
@@ -61,11 +67,21 @@ html {
     font-size: .9em;
     color:grey;
     text-decoration: none;
-    display: block;
+    display: inline-block;
 }
 
 .nav-menu a:hover{
     color: var(--cornflower);
+}
+
+.sub-menu{
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: .8em;
+}
+
+.submenu-link{
+    padding-left: 20px;
 }
 
 .current-page{
@@ -74,7 +90,7 @@ html {
     font-style: normal;
     font-size: .9em;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     color: var(--pink);
 }
 
@@ -96,14 +112,13 @@ html {
 
 /*INDEX STYLING*/
 
-.landing-pic {
-    margin: 200px 200px 50px 200px;
-    width: 30vw;
+.landing-img{
+    margin-top: 20vh;
+    margin-left: 14vw;
+    width: 32vw;
     min-width: 400px;
     max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
 }
 
 /*UNIVERSAL SERIES STYLING*/
@@ -118,11 +133,11 @@ html {
     font-family: mr-eaves-sans, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2em;
+    font-size: 3em;
     color: black;
     text-decoration: none;
-    margin-top: 10vw;
     margin-bottom: 0;
+    margin-top: 22vh;
 }
 
 .media {
@@ -133,7 +148,7 @@ html {
     font-size: .8em;
     color: rgb(62, 62, 62);
     text-decoration: none;
-    margin-top: none;
+    margin-top: 0;
 }
 
 .date{
@@ -236,7 +251,7 @@ html {
 .about-grid{
     display: grid;
     grid-template-columns: 400px 1fr;
-    margin-top: 20vw;
+    margin-top: 20vh;
     margin-left: 30px;
 }
 
