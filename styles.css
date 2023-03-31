@@ -173,7 +173,7 @@ html {
     margin-bottom: 27px;
 }
 .description a{
-    font-style: none;
+    font-style: normal;
     color: var(--pink)
 }
 
@@ -384,7 +384,6 @@ iframe {
     font-size: .85em;
     color:rgb(62, 62, 62);
     text-decoration: none;
-    letter-spacing: 110%;
     line-height: 160%;
 }
 
