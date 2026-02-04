@@ -3,6 +3,8 @@
     --cornflower: #5f6bba;
 }
 
+a:visited{color: #463285}
+
 html {
     background-color: #f1f1f1;
 }
