@@ -411,7 +411,7 @@ iframe {
 }
 
 .about-two{
-    grid-column: 1;
+    grid-column: 1-2;
     grid-row: 2;
     margin-left: 60px;
     margin-right: 40px;
