@@ -369,12 +369,56 @@ iframe {
     border: none;
 }
 
-/*JUNIPER IMAGE STYLING*/
+/*JUNIPER TREE STYLING*/
 
-.juniperimg {
-    width: 100%;
-    height: 100%;
-    border: 5px;
+.tjtone {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+}
+
+.tjttwo {
+    grid-column: 1 /span 2;
+    grid-row: 2;
+}
+
+.tjtthree {
+    grid-column: 1 /span 2;
+    grid-row: 3;
+}
+
+.tjtfour {
+    grid-column: 1 /span 2;
+    grid-row: 4;
+}
+
+.tjtfive {
+    grid-column: 1 /span 2;
+    grid-row: 5;
+}
+
+.tjtsix {
+    grid-column: 1 /span 2;
+    grid-row: 6;
+}
+
+.tjtseven {
+    grid-column: 1 /span 2;
+    grid-row: 7;
+}
+
+.tjteight {
+    grid-column: 1 /span 2;
+    grid-row: 8;
+}
+
+.tjtnine {
+    grid-column: 1 /span 2;
+    grid-row: 9;
+}
+
+.tjtten {
+    grid-column: 1 /span 2;
+    grid-row: 10;
 }
 
 /*ABOUT & CONTACT STYLING*/
