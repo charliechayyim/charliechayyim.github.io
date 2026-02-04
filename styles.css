@@ -369,6 +369,14 @@ iframe {
     border: none;
 }
 
+/*JUNIPER IMAGE STYLING*/
+
+.juniperimg {
+    width: 100%;
+    height: 50vh;
+    border: none;
+}
+
 /*ABOUT & CONTACT STYLING*/
 
 .about-title{
