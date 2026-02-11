@@ -193,6 +193,64 @@ html {
     z-index: -1;
 }
 
+/*IFTBC STYLING*/
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+}
+
+.half-width{
+    width:100%;
+    max-width: 800px;
+}
+
+.full-width{
+    width:100%;
+    max-width: 1600px;
+}
+
+.iftbcone {
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    height: 100%;
+}
+
+.iftbctwo {
+    grid-column: 1 /span 2;
+    grid-row: 2;
+}
+
+.iftbcthree {
+    grid-column: 1 /span 2;
+    grid-row: 3;
+}
+
+.iftbcfour {
+    grid-column: 1 /span 2;
+    grid-row: 4;
+}
+
+.iftbcfive {
+    grid-column: 1 /span 2;
+    grid-row: 5;
+}
+
+.iftbcsix {
+    grid-column: 1 /span 2;
+    grid-row: 6;
+}
+
+.iftbcseven {
+    grid-column: 1 /span 2;
+    grid-row: 7;
+}
+
+.iftbceight {
+    grid-column: 1 /span 2;
+    grid-row: 8;
+}
+
 /*YLMLMTM STYLING*/
 
 .grid-layout{
@@ -379,56 +437,67 @@ iframe {
 
 /*JUNIPER TREE STYLING*/
 
+.grid-layout{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+}
+
+.half-width{
+    width:100%;
+    max-width: 800px;
+}
+
+.full-width{
+    width:100%;
+    max-width: 1600px;
+}
+
 .tjtone {
-    grid-column: 1 /span 2;
+    grid-column: 1;
     grid-row: 1;
     height: 100%;
 }
 
 .tjttwo {
-    grid-column: 1 /span 2;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .tjtthree {
-    grid-column: 1 /span 2;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .tjtfour {
-    grid-column: 1 /span 2;
-    grid-row: 4;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .tjtfive {
     grid-column: 1 /span 2;
-    grid-row: 5;
+    grid-row: 3;
 }
 
 .tjtsix {
-    grid-column: 1 /span 2;
-    grid-row: 6;
+    grid-column: 1;
+    grid-row: 4;
 }
 
 .tjtseven {
-    grid-column: 1 /span 2;
-    grid-row: 7;
+    grid-column: 2;
+    grid-row: 4;
 }
 
 .tjteight {
-    grid-column: 1 /span 2;
-    grid-row: 8;
+    grid-column: 1;
+    grid-row: 5;
 }
 
 .tjtnine {
-    grid-column: 1 /span 2;
-    grid-row: 9;
+    grid-column: 2;
+    grid-row: 5;
 }
 
-.tjtten {
-    grid-column: 1 /span 2;
-    grid-row: 10;
-}
 
 /*ABOUT & CONTACT STYLING*/
 
