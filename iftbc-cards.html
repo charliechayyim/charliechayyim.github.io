@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>it's fun to be classified! - trading cards</title>
+  <link href="/styles.css" rel="stylesheet">
+  <link href="https://use.typekit.net/tgz5jbn.css" rel="stylesheet">
+  <style>
+    .slideshow-wrap {
+      max-width: 960px;
+      margin: 24px auto 0;
+      border: 1px solid #d2d2d2;
+      background: #fbfbfb;
+      padding: 20px;
+    }
+
+    .slide-frame {
+      margin: 0;
+      text-align: center;
+    }
+
+    .slide-image {
+      display: block;
+      width: 100%;
+      max-height: 74vh;
+      object-fit: contain;
+      margin: 0 auto;
+      background: #ffffff;
+    }
+
+    .slide-caption {
+      margin: 10px 0 0;
+      font-family: anonymous-pro, monospace;
+      font-size: 0.85em;
+      color: #3e3e3e;
+      text-align: right;
+    }
+
+    .slide-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .slide-button {
+      border: 1px solid #5f6bba;
+      background: #ffffff;
+      color: #5f6bba;
+      font-family: anonymous-pro, monospace;
+      font-size: 0.9em;
+      padding: 6px 14px;
+      cursor: pointer;
+    }
+
+    .slide-button:hover,
+    .slide-button:focus-visible {
+      background: #5f6bba;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .slide-index {
+      font-family: anonymous-pro, monospace;
+      font-size: 0.85em;
+      color: #3e3e3e;
+      min-width: 72px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .slideshow-wrap {
+        margin-top: 10px;
+        padding: 12px;
+      }
+
+      .slide-image {
+        max-height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="main-title"><a href="/index.html">CHARLIE<br>DARLING</a></h1>
+    <nav class="nav-menu">
+      <p id="series-header">series</p>
+      <div class="dropdown">
+        <ul class="sub-menu">
+          <li class="submenu-link current-page">it's fun to be classified! (cards)</li>
+          <li class="submenu-link"><a href="/hotglue.html">chayyim.hotglue</a></li>
+          <li class="submenu-link"><a href="/juniper-tree.html">the juniper tree</a></li>
+          <li class="submenu-link"><a href="/moral.html">moral</a></li>
+        </ul>
+      </div>
+      <ul class="sub-menu">
+        <li class="menu-link"><a href="/iftbc.html">back to series page</a></li>
+        <li class="menu-link"><a href="/about.html">about</a></li>
+        <li class="ig-link"><a href="http://chsh.hotglue.me" target="_blank">archives portfolio</a></li>
+        <br>
+        <li class="ig-link"><a href="http://www.instagram.com/mydarlingchaya" target="_blank">insta</a></li>
+        <li class="ig-link"><a href="https://www.printedmatter.org/catalog/artist/42004" target="_blank">shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="series-info">
+      <h2 class="series-title">TRADING CARDS #1</h2>
+      <p class="media">Use arrow keys or the buttons below to navigate details.</p>
+      <p class="date">8 card details from <i>it's fun to be classified!</i></p>
+    </div>
+
+    <section class="slideshow-wrap" aria-label="Trading cards slideshow">
+      <figure class="slide-frame">
+        <img id="card-slide" class="slide-image" src="/images/iftbc/pretty_invincible_card1.png" alt="Trading card detail 1 from It's Fun to Be Classified.">
+        <figcaption id="card-caption" class="slide-caption">Card 1 of 8</figcaption>
+      </figure>
+      <div class="slide-controls">
+        <button class="slide-button" id="prev-slide" type="button">Previous</button>
+        <p id="slide-index" class="slide-index">1 / 8</p>
+        <button class="slide-button" id="next-slide" type="button">Next</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p class="copyright">&copy; charlie chayyim shaw, 2026</p>
+  </footer>
+
+  <script>
+    (function () {
+      var slides = [
+        "/images/iftbc/pretty_invincible_card1.png",
+        "/images/iftbc/pretty_invincible_card2.png",
+        "/images/iftbc/pretty_invincible_card3.png",
+        "/images/iftbc/pretty_invincible_card4.png",
+        "/images/iftbc/pretty_invincible_card5.png",
+        "/images/iftbc/pretty_invincible_card6.png",
+        "/images/iftbc/pretty_invincible_card7.png",
+        "/images/iftbc/pretty_invincible_card8.png"
+      ];
+
+      var index = 0;
+      var slideImage = document.getElementById("card-slide");
+      var slideCaption = document.getElementById("card-caption");
+      var slideIndex = document.getElementById("slide-index");
+      var prevButton = document.getElementById("prev-slide");
+      var nextButton = document.getElementById("next-slide");
+
+      function renderSlide() {
+        var current = index + 1;
+        slideImage.src = slides[index];
+        slideImage.alt = "Trading card detail " + current + " from It's Fun to Be Classified.";
+        slideCaption.textContent = "Card " + current + " of " + slides.length;
+        slideIndex.textContent = current + " / " + slides.length;
+      }
+
+      function showNext() {
+        index = (index + 1) % slides.length;
+        renderSlide();
+      }
+
+      function showPrevious() {
+        index = (index - 1 + slides.length) % slides.length;
+        renderSlide();
+      }
+
+      prevButton.addEventListener("click", showPrevious);
+      nextButton.addEventListener("click", showNext);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") {
+          showNext();
+        } else if (event.key === "ArrowLeft") {
+          showPrevious();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
