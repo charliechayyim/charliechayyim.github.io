@@ -102,13 +102,17 @@
         </figure>
       </div>
 
-      <div class="eight">
-        <figure>
-          <img src="images/iftbc/pretty_invincible_card1.png"
-          alt="detail of 'curves' piece featuring legs from a Renaissance painting and a 60's drag program" class="half-width">
-          <figcaption class="photo-caption"><i>Detail of </i>what i am</figcaption>
-        </figure>
+     <section class="slideshow-wrap" aria-label="Trading cards slideshow">
+      <figure class="slide-frame">
+        <img id="card-slide" class="slide-image" src="/images/iftbc/pretty_invincible_card1.png" alt="Trading card detail 1 from It's Fun to Be Classified.">
+        <figcaption id="card-caption" class="slide-caption">Card 1 of 8</figcaption>
+      </figure>
+      <div class="slide-controls">
+        <button class="slide-button" id="prev-slide" type="button">Previous</button>
+        <p id="slide-index" class="slide-index">1 / 8</p>
+        <button class="slide-button" id="next-slide" type="button">Next</button>
       </div>
+    </section>
 
   </div>
 
@@ -117,6 +121,57 @@
 <footer>
   <p class="copyright">&copy; charlie chayyim shaw, 2026</p>
 </footer>
+
+<script>
+    (function () {
+      var slides = [
+        "/images/iftbc/pretty_invincible_card1.png",
+        "/images/iftbc/pretty_invincible_card2.png",
+        "/images/iftbc/pretty_invincible_card3.png",
+        "/images/iftbc/pretty_invincible_card4.png",
+        "/images/iftbc/pretty_invincible_card5.png",
+        "/images/iftbc/pretty_invincible_card6.png",
+        "/images/iftbc/pretty_invincible_card7.png",
+        "/images/iftbc/pretty_invincible_card8.png"
+      ];
+
+      var index = 0;
+      var slideImage = document.getElementById("card-slide");
+      var slideCaption = document.getElementById("card-caption");
+      var slideIndex = document.getElementById("slide-index");
+      var prevButton = document.getElementById("prev-slide");
+      var nextButton = document.getElementById("next-slide");
+
+      function renderSlide() {
+        var current = index + 1;
+        slideImage.src = slides[index];
+        slideImage.alt = "Trading card detail " + current + " from It's Fun to Be Classified.";
+        slideCaption.textContent = "Card " + current + " of " + slides.length;
+        slideIndex.textContent = current + " / " + slides.length;
+      }
+
+      function showNext() {
+        index = (index + 1) % slides.length;
+        renderSlide();
+      }
+
+      function showPrevious() {
+        index = (index - 1 + slides.length) % slides.length;
+        renderSlide();
+      }
+
+      prevButton.addEventListener("click", showPrevious);
+      nextButton.addEventListener("click", showNext);
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") {
+          showNext();
+        } else if (event.key === "ArrowLeft") {
+          showPrevious();
+        }
+      });
+    })();
+  </script>
 
 </body> 
 
