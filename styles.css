@@ -10,6 +10,10 @@ html {
     background-color: #f1f1f1;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* UNIVERSAL STYLING */
 
 .main-title{
@@ -361,6 +365,10 @@ html {
     grid-row: 22;
 }
 
+.grid-layout figure {
+    margin: 0 0 20px 0;
+}
+
 /*IFRAME STYLING*/
 
 iframe {
@@ -504,4 +512,114 @@ iframe {
 
 .cv-list {
     list-style: none;
+}
+
+@media (max-width: 900px) {
+    .main-title {
+        position: static;
+        width: 100%;
+        padding-top: 24px;
+        padding-left: 0;
+        left: auto;
+        text-align: center;
+    }
+
+    .nav-menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        left: auto;
+        top: auto;
+        padding: 0 20px;
+        margin: 10px 0 0;
+        text-align: center;
+    }
+
+    #series-header {
+        padding-left: 0;
+        line-height: 1.2;
+    }
+
+    .sub-menu {
+        padding-left: 0;
+    }
+
+    .content {
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .landing-img {
+        margin-top: 30px;
+        margin-left: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .series-info {
+        margin: 20px 0 0;
+    }
+
+    .series-title {
+        margin-top: 20px;
+        font-size: 2em;
+        text-align: left;
+    }
+
+    .media,
+    .date {
+        text-align: left;
+    }
+
+    .grid-layout {
+        display: block;
+    }
+
+    .half-width,
+    .full-width {
+        width: 100%;
+    }
+
+    .about-grid {
+        display: block;
+        margin: 24px 0 0;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .about-two {
+        margin: 0;
+    }
+
+    .cv {
+        margin: 0;
+    }
+
+    .cv-title {
+        margin-top: 24px;
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 0 14px;
+    }
+
+    .main-title a {
+        font-size: 1.15em;
+    }
+
+    .nav-menu a,
+    .current-page,
+    #series-header,
+    .about-text,
+    .description {
+        font-size: 0.82em;
+    }
 }
