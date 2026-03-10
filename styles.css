@@ -129,8 +129,7 @@ html {
 }
 
 .logo-img{
-    min-width: 100px;
-    max-width: 200px;
+    width: 50px;
     display: inline-block;
 }
 
