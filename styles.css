@@ -20,10 +20,10 @@ html {
     width: 400px;
     position: fixed;
     z-index: 0;
-    top: 0;
+    top: 10px;
     left: 10px;
     overflow-x: hidden;
-    padding-top: 0px;
+    padding-top: 4vw;
     padding-left: 2vw;
 }
 
