@@ -133,6 +133,10 @@ html {
     display: inline-block;
 }
 
+.main-title .logo-img{
+    margin-top: -68px;
+}
+
 /*UNIVERSAL SERIES STYLING*/
 
 .series-info {
